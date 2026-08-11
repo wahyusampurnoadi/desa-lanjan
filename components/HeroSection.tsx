@@ -21,22 +21,20 @@ export default function HeroSection() {
   }, [emblaApi]);
 
   return (
-    <section id="beranda" className="relative w-full bg-slate-950 text-white">
+    <section id="beranda" className="relative w-full bg-slate-950 text-white transition-colors duration-300">
       {/* Carousel Container */}
       <div className="w-full overflow-hidden" ref={emblaRef}>
         <div className="flex w-full">
           {HERO_SLIDES.map((slide) => (
             <div 
               key={slide.id} 
-              /* min-h-[calc(100vh-80px)] memastikan hero tampil 100% tinggi layar dikurangi navbar */
-              className="relative w-full min-w-full flex-shrink-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 md:pb-36 min-h-[calc(100vh-80px)] select-none overflow-hidden"
+              className="relative w-full min-w-full flex-shrink-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-28 sm:pb-36 min-h-[500px] sm:min-h-[560px] select-none overflow-hidden"
             >
               {/* Background Image */}
               <div 
                 className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url('${slide.bgImage}')` }}
               >
-                {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-slate-950/75 backdrop-blur-[2px]"></div>
               </div>
 
@@ -63,7 +61,7 @@ export default function HeroSection() {
                   </a>
                   <a 
                     href="#potensi" 
-                    className="bg-white/10 hover:bg-white/20 active:scale-95 text-white border border-white/20 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold transition-all backdrop-blur-sm text-sm sm:text-base"
+                    className="bg-white/10 hover:bg-white/20 active:scale-95 text-white border border-white/20 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold transition-all backdrop-blur-sm text-sm sm:text-base flex items-center justify-center"
                   >
                     Potensi Desa
                   </a>
@@ -91,8 +89,10 @@ export default function HeroSection() {
         <ChevronRight size={24} />
       </button>
 
-      {/* STAT SECTION */}
-      <StatSection />
+      {/* STAT SECTION: Posisikan melayang secara bebas tepat di batas dasar Hero */}
+      <div className="absolute left-0 right-0 bottom-0 translate-y-1/2 z-30 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <StatSection />
+      </div>
     </section>
   );
 }

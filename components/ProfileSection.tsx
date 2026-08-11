@@ -96,7 +96,7 @@ const STATS = [
     icon: Users,
     badge: 'Jiwa Terdata',
     gradient: 'from-emerald-500/10 via-teal-500/5 to-transparent',
-    borderHover: 'hover:border-emerald-400',
+    borderHover: 'hover:border-emerald-400 dark:hover:border-emerald-500',
     iconBg: 'bg-emerald-500 text-white shadow-emerald-500/20'
   },
   { 
@@ -106,7 +106,7 @@ const STATS = [
     icon: Map,
     badge: 'Kawasan Desa',
     gradient: 'from-blue-500/10 via-cyan-500/5 to-transparent',
-    borderHover: 'hover:border-blue-400',
+    borderHover: 'hover:border-blue-400 dark:hover:border-blue-500',
     iconBg: 'bg-blue-600 text-white shadow-blue-500/20'
   },
   { 
@@ -116,7 +116,7 @@ const STATS = [
     icon: Compass,
     badge: 'Dataran Tinggi',
     gradient: 'from-amber-500/10 via-orange-500/5 to-transparent',
-    borderHover: 'hover:border-amber-400',
+    borderHover: 'hover:border-amber-400 dark:hover:border-amber-500',
     iconBg: 'bg-amber-500 text-white shadow-amber-500/20'
   },
   { 
@@ -126,7 +126,7 @@ const STATS = [
     icon: ShieldCheck,
     badge: 'Administratif',
     gradient: 'from-teal-500/10 via-emerald-500/5 to-transparent',
-    borderHover: 'hover:border-teal-400',
+    borderHover: 'hover:border-teal-400 dark:hover:border-teal-500',
     iconBg: 'bg-teal-600 text-white shadow-teal-500/20'
   },
 ];
@@ -141,7 +141,10 @@ export default function ProfilSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section id="profil" className="py-16 sm:py-24 bg-gradient-to-b from-white via-slate-50/50 to-slate-50 relative overflow-hidden">
+    <section 
+      id="profil" 
+      className="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-gradient-to-b from-white via-slate-50/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950 text-slate-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20 relative z-10">
         
         {/* SECTION 1: SELAYANG PANDANG */}
@@ -150,39 +153,39 @@ export default function ProfilSection() {
           {/* Deskripsi Teks */}
           <div className="space-y-6">
             <div className="space-y-3">
-              <span className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100/80 border border-emerald-200/60 px-3.5 py-1.5 rounded-full shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Selayang Pandang
+              <span className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-widest bg-emerald-100/80 dark:bg-emerald-950/80 border border-emerald-200/60 dark:border-emerald-800/80 px-3.5 py-1.5 rounded-full shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Selayang Pandang
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Mengenal Lebih Dekat <span className="text-emerald-600">Desa Lanjan</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                Mengenal Lebih Dekat <span className="text-emerald-600 dark:text-emerald-400">Desa Lanjan</span>
               </h2>
             </div>
 
             {/* Paragraf 1 & 2 (Selalu Tampil) */}
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                Desa Lanjan merupakan salah satu desa yang terletak di Kecamatan Sumowono, Kabupaten Semarang, Provinsi Jawa Tengah, dengan wilayah berada di kawasan dataran tinggi atau pegunungan berudara sejuk. Desa ini memiliki luas wilayah kurang lebih 4,25 km² (425 Ha).
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+            <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
               Wilayah Desa Lanjan terbagi menjadi 7 (tujuh) dusun, yaitu Dusun Lanjan, Dusun Kalibanger, Dusun Jambon, Dusun Susukan, Dusun Larangan, Dusun Tegalroto, dan Dusun Ngelo. Desa Lanjan dihuni oleh penduduk sebanyak 4.299 jiwa, yang terdiri dari 2.178 jiwa laki-laki, 2.051 jiwa perempuan, serta mencakup 1.499 Kepala Keluarga (KK). 
             </p>
 
             {/* Paragraf Tambahan + List Poin (Tampil Saat Expanded) */}
             {isExpanded && (
               <div className="space-y-6 animate-fadeIn">
-                <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
                   Sebagian besar masyarakat Desa Lanjan menggantungkan hidupnya sebagai petani, buruh tani, dan pedagang. Untuk mendukung aktivitas sehari-hari warganya, desa ini dilengkapi dengan fasilitas pendidikan berupa 2 Sekolah Dasar (SD Negeri Lanjan 01 & SD Negeri Lanjan 02), 1 Madrasah Ibtidaiyah (MI Miftakhul Ulum), serta 2 Taman Kanak-kanak (TK Keluarga Lanjan & TK Pertiwi), ditambah dengan layanan kesehatan dasar seperti Posyandu. 
                 </p>
 
                 <div className="space-y-3 pt-2">
-                  <div className="flex items-center gap-3 text-slate-700 font-semibold text-sm sm:text-base">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <div className="flex items-center gap-3 text-slate-700 dark:text-slate-200 font-semibold text-sm sm:text-base">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <span>Lingkungan pegunungan yang asri dan sejuk</span>
                   </div>
-                  <div className="flex items-center gap-3 text-slate-700 font-semibold text-sm sm:text-base">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <div className="flex items-center gap-3 text-slate-700 dark:text-slate-200 font-semibold text-sm sm:text-base">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <span>Pusat hasil komoditas sayur dan buah segar</span>
@@ -208,7 +211,7 @@ export default function ProfilSection() {
           </div>
 
           {/* Gambar Profil Utama */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800 group">
             <img 
               src="/images/desa-lanjan.webp" 
               alt="Wilayah Desa Lanjan" 
@@ -233,7 +236,7 @@ export default function ProfilSection() {
             return (
               <div 
                 key={idx} 
-                className={`group relative bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between ${stat.borderHover}`}
+                className={`group relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between ${stat.borderHover}`}
               >
                 {/* Visual Gradient Background Accent */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-70 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
@@ -243,17 +246,17 @@ export default function ProfilSection() {
                   <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 ${stat.iconBg}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100/80 border border-slate-200/60 px-2.5 py-1 rounded-full backdrop-blur-sm">
+                  <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 px-2.5 py-1 rounded-full backdrop-blur-sm">
                     {stat.badge}
                   </span>
                 </div>
 
                 {/* Bottom Row: Number & Label */}
                 <div className="relative z-10 space-y-1">
-                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                     <AnimatedNumber target={stat.value} suffix={stat.suffix} />
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-bold tracking-wide">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-bold tracking-wide">
                     {stat.label}
                   </p>
                 </div>
@@ -263,7 +266,7 @@ export default function ProfilSection() {
         </div>
 
         {/* SECTION 3: VISI & MISI (PREMIUM DARK CARD) */}
-        <div className="relative rounded-3xl bg-slate-900 text-white p-8 sm:p-12 shadow-2xl overflow-hidden border border-slate-800">
+        <div className="relative rounded-3xl bg-slate-900 dark:bg-slate-900/90 text-white p-8 sm:p-12 shadow-2xl overflow-hidden border border-slate-800">
           {/* Ambient Glows */}
           <div className="absolute top-0 left-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 right-10 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
