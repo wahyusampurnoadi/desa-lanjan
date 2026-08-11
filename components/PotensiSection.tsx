@@ -41,7 +41,7 @@ export default function PotensiSection() {
             Keunggulan Wilayah
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-3">
-            Potensi & Wisata Desa
+            Potensi & UMKM
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
             Sektor-sektor unggulan yang menjadi pilar perekonomian dan keindahan Desa Lanjan.

@@ -28,7 +28,7 @@ export default function PengaduanSection() {
     e.preventDefault();
 
     // 1. Nomor WhatsApp Tujuan Admin Desa
-    const NOMOR_WA_ADMIN = '6281228817085';
+    const NOMOR_WA_ADMIN = '6285742003301';
 
     // 2. Format pesan rapi TANPA EMOJI (Mencegah karakter aneh di WA Web)
     const pesanWA = 
