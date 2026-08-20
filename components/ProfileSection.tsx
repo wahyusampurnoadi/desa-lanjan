@@ -213,7 +213,7 @@ export default function ProfilSection() {
           {/* Gambar Profil Utama */}
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800 group">
             <img 
-              src="/images/profil.jpg" 
+              src="/images/profil.webp" 
               alt="Wilayah Desa Lanjan" 
               className="w-full h-[320px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
