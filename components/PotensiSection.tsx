@@ -9,7 +9,7 @@ const POTENSI_DATA = [
     description:
       'Menjadi sektor unggulan utama dengan komoditas melimpah berupa kopi dan aneka sayuran, padi (yang dipanen setahun sekali karena kontur dataran tinggi), serta hasil palawija seperti ketela dan ubi.',
     icon: Sprout,
-    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+    image: '/images/header-1.jpg',
   },
   {
     title: 'Seni Budaya dan Olahraga',
@@ -23,7 +23,7 @@ const POTENSI_DATA = [
     description:
       'Usaha egg roll yang berlokasi di Dusun Kalibanger. Rengginang pohong "Mak Dah" serta berbagai jajanan pasar tradisional di Dusun Jambon. Rengginang singkong "Mak Nunuk" di Dusun Jambon. Kripik atos-atos di Dusun Ngelo. Berbagai jajanan pasar/makanan tradisional khas olahan warga seperti cetil, cetot, lupis, ketan srundeng, klepon, jongkong, dan putu mayang (yang selama ini dipasarkan secara offline di Pasar Babadan, Ungaran, serta pesanan warga sekitar).',
     icon: ShoppingBag,
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+    image: 'images/umkm.jpg',
   },
 ];
 

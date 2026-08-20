@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { name: "Beranda", href: "#beranda", id: "beranda" },
   { name: "Profil Desa", href: "#profil", id: "profil" },
   { name: "Potensi & UMKM", href: "#potensi", id: "potensi" },
-  { name: "Berita", href: "#berita", id: "berita" },
   { name: "Pengaduan", href: "#pengaduan", id: "pengaduan" },
   { name: "Kontak", href: "#kontak", id: "kontak" },
 ];

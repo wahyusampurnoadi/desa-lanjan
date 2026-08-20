@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProfileSection from '@/components/ProfileSection';
 import PotensiSection from '@/components/PotensiSection';
-import BeritaSection from '@/components/BeritaSection';
 import PengaduanSection from '@/components/PengaduanSection';
 import Footer from '@/components/Footer';
 import ScrollAnimation from '@/components/ScrollAnimation';
@@ -21,10 +20,6 @@ export default function Home() {
       <ScrollAnimation>
         <PotensiSection />
       </ScrollAnimation>  
-      
-      <ScrollAnimation>
-        <BeritaSection />
-      </ScrollAnimation>
 
       <ScrollAnimation>
         <PengaduanSection />

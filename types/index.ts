@@ -80,7 +80,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Mewujudkan Desa Lanjan yang',
     highlight: 'Maju & Asri',
     description: 'Pusat informasi publik, potensi pertanian, serta layanan digital masyarakat Desa Lanjan, Kec. Sumowono, Kab. Semarang.',
-    bgImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop' // Contoh Gambar Pemandangan
+    bgImage: '/images/header-1.jpg'
   },
   {
     id: 2,
@@ -88,7 +88,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Hasil Alam Subur dari',
     highlight: 'Lereng Pegunungan',
     description: 'Menghasilkan berbagai komoditas sayur segar berkualitas tinggi yang dikelola oleh kelompok tani lokal.',
-    bgImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1600&auto=format&fit=crop'
+    bgImage: '/images/header-2.jpg'
   },
   {
     id: 3,
@@ -96,6 +96,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Kemudahan Akses Informasi &',
     highlight: 'Surat Online',
     description: 'Layanan publik yang cepat, transparan, dan dapat diakses dari mana saja untuk seluruh warga Desa Lanjan.',
-    bgImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600&auto=format&fit=crop'
+    bgImage: '/images/header-3.jpg'
   }
 ];
