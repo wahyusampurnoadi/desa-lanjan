@@ -14,8 +14,35 @@ export default function PengaduanSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const pesanWA = `Halo Admin Desa Lanjan,%0A%0ASaya ingin menyampaikan pengaduan:%0A- *Nama*: ${formData.nama}%0A- *NIK/WA*: ${formData.kontak}%0A- *Dusun*: ${formData.dusun}%0A- *Kategori*: ${formData.kategori}%0A- *Isi Laporan*: ${formData.pesan}`;
-    window.open(`https://wa.me/6281234567890?text=${pesanWA}`, '_blank');
+
+    // Fungsi pembersih tingkat lanjut untuk menghapus karakter pemisah suku kata & titik tersembunyi
+    const clean = (text: string) => {
+      return text
+        .normalize('NFD') // Normalisasi unicode
+        .replace(/[\u00AD\u2027\u00B7\u200B-\u200D\uFEFF]/g, '') // Hapus soft-hyphen, middle dot, & zero-width space
+        .trim();
+    };
+
+    const namaClean = clean(formData.nama);
+    const kontakClean = clean(formData.kontak);
+    const dusunClean = clean(formData.dusun);
+    const kategoriClean = clean(formData.kategori);
+    const pesanClean = clean(formData.pesan);
+
+    // Menyusun teks pesan mentah
+    const pesanMentah = `Halo Admin Desa Lanjan,
+
+Saya ingin menyampaikan pengaduan:
+- Nama: ${namaClean}
+- NIK/WA: ${kontakClean}
+- Dusun: ${dusunClean}
+- Kategori: ${kategoriClean}
+- Isi Laporan: ${pesanClean}`;
+
+    // Gunakan encodeURIComponent pada string yang sudah di-clean
+    const pesanEncoded = encodeURIComponent(pesanMentah);
+
+    window.open(`https://wa.me/6285640671541?text=${pesanEncoded}`, '_blank');
   };
 
   return (
@@ -83,6 +110,9 @@ export default function PengaduanSection() {
                   <input
                     type="text"
                     required
+                    spellCheck={false}
+                    autoCorrect="off"
+                    autoComplete="off"
                     placeholder="Sesuai KTP"
                     value={formData.nama}
                     onChange={(e) => setFormData({ ...formData, nama: e.target.value })}
@@ -101,6 +131,9 @@ export default function PengaduanSection() {
                   <input
                     type="text"
                     required
+                    spellCheck={false}
+                    autoCorrect="off"
+                    autoComplete="off"
                     placeholder="Contoh: 08123456789"
                     value={formData.kontak}
                     onChange={(e) => setFormData({ ...formData, kontak: e.target.value })}
@@ -144,7 +177,7 @@ export default function PengaduanSection() {
                     onChange={(e) => setFormData({ ...formData, kategori: e.target.value })}
                     className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 rounded-xl text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-400 transition-all appearance-none cursor-pointer"
                   >
-                    <option value="" disabled className="text-slate-400 dark:bg-slate-900">Infrastruktur & Jalan</option>
+                    <option value="" disabled className="text-slate-400 dark:bg-slate-900">Pilih Kategori Laporan</option>
                     <option value="Infrastruktur & Jalan" className="dark:bg-slate-900">Infrastruktur & Jalan</option>
                     <option value="Fasilitas Umum" className="dark:bg-slate-900">Fasilitas Umum</option>
                     <option value="Pelayanan Administrasi" className="dark:bg-slate-900">Pelayanan Administrasi</option>
@@ -166,6 +199,8 @@ export default function PengaduanSection() {
                 <textarea
                   rows={4}
                   required
+                  spellCheck={false}
+                  autoCorrect="off"
                   placeholder="Jelaskan detail lokasi dan masalah yang ingin dilaporkan..."
                   value={formData.pesan}
                   onChange={(e) => setFormData({ ...formData, pesan: e.target.value })}
