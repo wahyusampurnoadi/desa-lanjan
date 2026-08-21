@@ -11,9 +11,11 @@ const POTENSI_DATA = [
     icon: Sprout,
     image: '/images/header-1.webp',
     gallery: [
-      '/images/header-1.jpg',
-      '/images/header-2.jpg',
-      '/images/header-3.jpg',
+      '/images/perkebunan.webp',
+      '/images/perkebunan-2.webp',
+      '/images/perkebunan-3.webp',
+      '/images/peternakan.webp',
+      '/images/peternakan-2.webp',
     ],
   },
   {
