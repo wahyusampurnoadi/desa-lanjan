@@ -7,7 +7,7 @@ const POTENSI_DATA = [
   {
     title: 'Sektor Pertanian & Perkebunan',
     description:
-      'Menjadi sektor unggulan utama dengan komoditas melimpah berupa kopi dan aneka sayuran, padi (yang dipanen setahun sekali karena kontur dataran tinggi), serta hasil palawija seperti ketela dan ubi.',
+      'Menjadi sektor unggulan utama dengan komoditas melimpah berupa kopi dan aneka sayuran, padi (yang dipanen setahun sekali karena kontur dataran tinggi), serta hasil palawija seperti ketela dan ubi. Sektor pertanian dan perkebunan masih menjadi andalan utama perekonomian Desa Lanjan. Wilayah ini dikenal memiliki komoditas yang melimpah, terutama kopi dan aneka sayuran. Selain itu, padi juga menjadi salah satu hasil pertanian penting bagi warga, meski di beberapa wilayah hanya dapat dipanen setahun sekali mengingat kondisi geografis dan pola tanam setempat. Kombinasi hasil bumi ini menjadikan sektor agraria sebagai penopang utama kesejahteraan masyarakat desa.',
     icon: Sprout,
     image: '/images/header-1.webp',
     gallery: [
@@ -21,7 +21,7 @@ const POTENSI_DATA = [
   {
     title: 'Seni Budaya dan Olahraga',
     description:
-      'Desa Lanjan memiliki kekayaan seni tradisional berupa kesenian reog, serta prestasi dan fasilitas olahraga unggulan yaitu cabang olahraga bulu tangkis di Dusun Lanjan serta bola voli di Dusun Jambon.',
+      'Desa Lanjan memiliki kekayaan seni tradisional berupa kesenian reog, serta prestasi dan fasilitas olahraga unggulan yaitu cabang olahraga bulu tangkis di Dusun Lanjan serta bola voli di Dusun Jambon. Tak hanya kaya akan hasil bumi, Desa Lanjan juga memiliki warisan seni tradisional yang terus dilestarikan, salah satunya kesenian reog yang menjadi identitas budaya masyarakat setempat. Di bidang olahraga, desa ini turut mencatatkan prestasi membanggakan, khususnya di cabang olahraga bulu tangkis, yang kini didukung dengan fasilitas memadai bagi warga untuk berlatih dan mengembangkan bakat.',
     icon: Mountain,
     image: 'images/kesenian-1.webp',
     gallery: [
@@ -33,7 +33,7 @@ const POTENSI_DATA = [
   {
     title: 'Produk Unggulan UMKM (Olahan Ketela & Lainnya)',
     description:
-      'Usaha egg roll yang berlokasi di Dusun Kalibanger. Rengginang pohong "Mak Dah" serta berbagai jajanan pasar tradisional di Dusun Jambon. Rengginang singkong "Mak Nunuk" di Dusun Jambon. Kripik atos-atos di Dusun Ngelo. Berbagai jajanan pasar/makanan tradisional khas olahan warga seperti cetil, cetot, lupis, ketan srundeng, klepon, jongkong, dan putu mayang (yang selama ini dipasarkan secara offline di Pasar Babadan, Ungaran, serta pesanan warga sekitar).',
+      'Usaha egg roll yang berlokasi di Dusun Kalibanger. Rengginang pohong "Mak Dah" serta berbagai jajanan pasar tradisional di Dusun Jambon. Rengginang singkong "Mak Nunuk" di Dusun Jambon. Kripik atos-atos di Dusun Ngelo. Berbagai jajanan pasar/makanan tradisional khas olahan warga seperti cetil, cetot, lupis, ketan srundeng, klepon, jongkong, dan putu mayang (yang selama ini dipasarkan secara offline di Pasar Babadan, Ungaran, serta pesanan warga sekitar). Di sektor ekonomi kreatif, Desa Lanjan memiliki sejumlah produk UMKM unggulan yang mulai menarik perhatian, di antaranya olahan ketela dan berbagai jajanan lainnya. Salah satu yang menonjol adalah usaha egg roll yang berlokasi di Dusun Kalibanger, serta rengginang pohong dengan merek "Mak Dah" yang cukup dikenal masyarakat. Selain itu, berbagai jajanan pasar tradisional juga masih diproduksi warga di Dusun Kalibanger, menambah warna kuliner khas desa ini.',
     icon: ShoppingBag,
     image: '/images/umkm-1.webp',
     gallery: [
