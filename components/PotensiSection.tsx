@@ -23,10 +23,11 @@ const POTENSI_DATA = [
     description:
       'Desa Lanjan memiliki kekayaan seni tradisional berupa kesenian reog, serta prestasi dan fasilitas olahraga unggulan yaitu cabang olahraga bulu tangkis di Dusun Lanjan serta bola voli di Dusun Jambon.',
     icon: Mountain,
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+    image: 'images/kesenian-1.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-      '/images/profil.jpg',
+      'images/kesenian-2.webp',
+      'images/olahraga-1.webp',
+      'images/olahraga-2.webp',
     ],
   },
   {
