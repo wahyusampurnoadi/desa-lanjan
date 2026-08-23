@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Desa Lanjan',
-  description: 'Website Resmi Desa Lanjan',
+  title: 'Desa Lanjan - Website Resmi Desa Lanjan',
+  description: 'Portal Pelayanan Aspirasi & Informasi Desa Lanjan',
 };
 
 export default function RootLayout({
