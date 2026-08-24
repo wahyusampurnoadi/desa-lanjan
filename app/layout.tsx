@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   title: 'Website Resmi Desa Lanjan',
   description: 'Portal Resmi Informasi, Pelayanan, dan Aspirasi Masyarakat Desa Lanjan.',
   openGraph: {
-    title: 'Website Resmi Desa Lanjan',
-    description: 'Portal Resmi Informasi Desa Lanjan.',
+    title: 'Website Resmi Desa Lanjan | Kecamatan Sumowono Semarang',
+    description: 'Portal resmi informasi publik, profil, dan layanan Desa Lanjan, Kecamatan Sumowono, Kabupaten Semarang.',
     url: 'https://desalanjan.web.id',
     siteName: 'Desa Lanjan',
     locale: 'id_ID',
