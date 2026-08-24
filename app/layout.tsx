@@ -9,9 +9,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Desa Lanjan - Website Resmi Desa Lanjan',
-  description: 'Portal Pelayanan Aspirasi & Informasi Desa Lanjan',
-};
+  title: 'Website Resmi Desa Lanjan',
+  description: 'Portal Resmi Informasi, Pelayanan, dan Aspirasi Masyarakat Desa Lanjan.',
+  openGraph: {
+    title: 'Website Resmi Desa Lanjan',
+    description: 'Portal Resmi Informasi Desa Lanjan.',
+    url: 'https://desalanjan.web.id',
+    siteName: 'Desa Lanjan',
+    locale: 'id_ID',
+    type: 'website',
+  },
+}
 
 export default function RootLayout({
   children,
