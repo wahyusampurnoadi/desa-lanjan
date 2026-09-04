@@ -170,7 +170,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-slate-950 py-4 text-center text-xs text-slate-500 border-t border-slate-900">
-        © 2026 Pemerintah Desa Lanjan. All rights reserved.
+        © 2026 Pemerintah Desa Lanjan. Made by team KKN Universitas Ngudi Waluyo.
       </div>
 
     </footer>
