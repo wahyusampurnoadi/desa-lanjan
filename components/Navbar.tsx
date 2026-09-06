@@ -15,7 +15,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("#beranda");
-  
+
   // Handling Theme & Hydration
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -27,7 +27,7 @@ export default function Navbar() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -35% 0px", // Area sensitivitas layar tengah
+      rootMargin: "-20% 0px -35% 0px",
       threshold: 0.2,
     };
 
@@ -41,10 +41,9 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
 
-    // Amati setiap section berdasarkan ID
     NAV_LINKS.forEach((link) => {
       if (link.id) {
         const element = document.getElementById(link.id);
@@ -55,7 +54,6 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  // Komponen Tombol Toggle
   const renderThemeToggle = () => {
     if (!mounted) {
       return (
@@ -187,6 +185,36 @@ export default function Navbar() {
           >
             Layanan Publik
           </a>
+        </div>
+      </div>
+
+      {/* Marquee / Running Text Section (Glassmorphism Elegant) */}
+      <div className="group relative bg-emerald-500/[0.03] dark:bg-emerald-400/[0.04] backdrop-blur-md text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm py-2 overflow-hidden border-t border-emerald-500/10 flex select-none">
+        {/* Fade Effect Transparan Kiri & Kanan */}
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-r from-white/80 dark:from-slate-900/80 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-l from-white/80 dark:from-slate-900/80 to-transparent" />
+
+        {/* Track 1 */}
+        <div className="flex shrink-0 items-center gap-8 font-medium animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused] pr-8">
+          <span>
+            📢 Website ini dibuat oleh Tim KKN Universitas Ngudi Waluyo
+          </span>
+          <span className="opacity-40">•</span>
+          <span>Selamat Datang di Portal Resmi Desa Lanjan</span>
+          <span className="opacity-40">•</span>
+        </div>
+
+        {/* Track 2 (Looping) */}
+        <div
+          aria-hidden="true"
+          className="flex shrink-0 items-center gap-8 font-medium animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused] pr-8"
+        >
+          <span>
+            📢 Website ini dibuat oleh Tim KKN Universitas Ngudi Waluyo
+          </span>
+          <span className="opacity-40">•</span>
+          <span>Selamat Datang di Portal Resmi Desa Lanjan</span>
+          <span className="opacity-40">•</span>
         </div>
       </div>
     </nav>

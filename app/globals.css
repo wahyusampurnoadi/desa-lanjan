@@ -59,3 +59,12 @@ a,
   backdrop-filter: blur(8px);
   border-color: #1e293b !important;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
