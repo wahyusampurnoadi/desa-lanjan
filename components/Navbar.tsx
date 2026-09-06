@@ -200,6 +200,8 @@ export default function Navbar() {
             📢 Website ini dibuat oleh Tim KKN Universitas Ngudi Waluyo
           </span>
           <span className="opacity-40">•</span>
+          <span>“UNW MENGABDI, BUMI LANJAN BERSERI”</span>
+          <span className="opacity-40">•</span>
           <span>Selamat Datang di Portal Resmi Desa Lanjan</span>
           <span className="opacity-40">•</span>
         </div>
@@ -212,6 +214,8 @@ export default function Navbar() {
           <span>
             📢 Website ini dibuat oleh Tim KKN Universitas Ngudi Waluyo
           </span>
+          <span className="opacity-40">•</span>
+          <span>“UNW MENGABDI, BUMI LANJAN BERSERI”</span>
           <span className="opacity-40">•</span>
           <span>Selamat Datang di Portal Resmi Desa Lanjan</span>
           <span className="opacity-40">•</span>
