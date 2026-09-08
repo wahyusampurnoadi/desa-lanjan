@@ -3,11 +3,31 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Sprout, Mountain, ShoppingBag, ArrowUpRight, X, Maximize2, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const POTENSI_DATA = [
+interface PotensiItem {
+  title: string;
+  description: React.ReactNode;
+  icon: React.ElementType;
+  image: string;
+  gallery: string[];
+}
+
+const POTENSI_DATA: PotensiItem[] = [
   {
     title: 'Sektor Pertanian & Perkebunan',
-    description:
-      'Menjadi sektor unggulan utama dengan komoditas melimpah berupa kopi dan aneka sayuran, padi (yang dipanen setahun sekali karena kontur dataran tinggi), serta hasil palawija seperti ketela dan ubi. Sektor pertanian dan perkebunan masih menjadi andalan utama perekonomian Desa Lanjan. Wilayah ini dikenal memiliki komoditas yang melimpah, terutama kopi dan aneka sayuran. Selain itu, padi juga menjadi salah satu hasil pertanian penting bagi warga, meski di beberapa wilayah hanya dapat dipanen setahun sekali mengingat kondisi geografis dan pola tanam setempat. Kombinasi hasil bumi ini menjadikan sektor agraria sebagai penopang utama kesejahteraan masyarakat desa.',
+    description: (
+      <>
+        Menjadi sektor unggulan utama dengan komoditas melimpah berupa kopi dan aneka sayuran, padi (yang dipanen setahun sekali karena kontur dataran tinggi), serta hasil palawija seperti ketela dan ubi. Sektor pertanian dan perkebunan masih menjadi andalan utama perekonomian Desa Lanjan. Wilayah ini dikenal memiliki komoditas yang melimpah, terutama kopi dan aneka sayuran. Selain itu, padi juga menjadi salah satu hasil pertanian penting bagi warga, meski di beberapa wilayah hanya dapat dipanen setahun sekali mengingat kondisi geografis dan pola tanam setempat. Kombinasi hasil bumi ini menjadikan sektor agraria sebagai penopang utama kesejahteraan masyarakat desa. Baca selengkapnya di{' '}
+        <a
+          href="https://profildesalanjan.blogspot.com/2026/09/profil-desa-lanjan.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+        >
+          Blogspot Desa Lanjan
+        </a>
+        .
+      </>
+    ),
     icon: Sprout,
     image: '/images/header-1.webp',
     gallery: [
@@ -23,11 +43,11 @@ const POTENSI_DATA = [
     description:
       'Desa Lanjan memiliki kekayaan seni tradisional berupa kesenian reog, serta prestasi dan fasilitas olahraga unggulan yaitu cabang olahraga bulu tangkis di Dusun Lanjan serta bola voli di Dusun Jambon. Tak hanya kaya akan hasil bumi, Desa Lanjan juga memiliki warisan seni tradisional yang terus dilestarikan, salah satunya kesenian reog yang menjadi identitas budaya masyarakat setempat. Di bidang olahraga, desa ini turut mencatatkan prestasi membanggakan, khususnya di cabang olahraga bulu tangkis, yang kini didukung dengan fasilitas memadai bagi warga untuk berlatih dan mengembangkan bakat.',
     icon: Mountain,
-    image: 'images/kesenian-1.webp',
+    image: '/images/kesenian-1.webp',
     gallery: [
-      'images/kesenian-2.webp',
-      'images/olahraga-1.webp',
-      'images/olahraga-2.webp',
+      '/images/kesenian-2.webp',
+      '/images/olahraga-1.webp',
+      '/images/olahraga-2.webp',
     ],
   },
   {
@@ -46,8 +66,6 @@ const POTENSI_DATA = [
     ],
   },
 ];
-
-type PotensiItem = typeof POTENSI_DATA[0];
 
 export default function PotensiSection() {
   const [selectedItem, setSelectedItem] = useState<PotensiItem | null>(null);
@@ -160,7 +178,7 @@ export default function PotensiSection() {
 
       </div>
 
-      {/* MODAL POP-UP DETAIL - RESPONSIVE 2 COLUMNS ON DESKTOP */}
+      {/* MODAL POP-UP DETAIL */}
       {selectedItem && (
         <div className="fixed inset-0 z-[9990] flex items-center justify-center p-4 sm:p-6 pt-16 sm:pt-24 pb-6 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
           {/* Backdrop */}
@@ -250,7 +268,7 @@ export default function PotensiSection() {
               )}
             </div>
 
-            {/* KOLOM KANAN: DESKRIPSI & INFO (Scrollable) */}
+            {/* KOLOM KANAN: DESKRIPSI & INFO */}
             <div className="w-full md:w-1/2 p-5 sm:p-8 flex flex-col justify-between overflow-hidden">
               <div className="flex flex-col h-full min-h-0">
                 {/* Header Judul Khusus Desktop */}
@@ -268,11 +286,11 @@ export default function PotensiSection() {
                   Deskripsi Lengkap
                 </h4>
                 
-                {/* Area Deskripsi Teks Luas */}
+                {/* Area Deskripsi Teks */}
                 <div className="overflow-y-auto scroll-smooth flex-1 pr-2 max-h-[220px] sm:max-h-[300px] md:max-h-[calc(85vh-200px)]">
-                  <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-sm sm:text-base whitespace-pre-line pb-4">
+                  <div className="text-slate-700 dark:text-slate-200 leading-relaxed text-sm sm:text-base pb-4">
                     {selectedItem.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
